@@ -1,0 +1,96 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+:root {
+  --base: #13C4A5;
+  --spacing: 10px;
+  --blur: 0px;
+}
+
+main {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+#left {
+  background: url("./bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: blur(var(--blur));
+  height: 100vh;
+  width: 100%;
+}
+
+#right {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--base);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1, h2 {
+  padding: 0px 20px;
+}
+
+label {
+  font-size: 12px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.sliders {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px 20px;
+}
+
+.sliders div {
+  margin: 0px 10px;
+}
+
+.sliders input {
+  width: 100%;
+}
+
+button {
+  padding: var(--spacing);
+  margin-top: 20px;
+}
+
+#right i {
+  display: block;
+  font-size: 32px;
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    flex-direction: row;
+  }
+    
+  #left {
+    width: 50%;
+  }
+  
+  #right {
+    width: 50%;
+  }
+  #right i {
+    display: none!important;
+  }
+    }
